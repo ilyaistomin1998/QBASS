@@ -12,10 +12,14 @@ TEMPLATE = app
 QT += widgets
 
 SOURCES += main.cpp\
-        audioplayer.cpp
+        audioplayer.cpp \
+    progress.cpp
 
 HEADERS  += audioplayer.h\
-        bass.h
+        bass.h \
+    progress.h
+
+RESOURCES     = resources.qrc
 
 FORMS    += audioplayer.ui
 

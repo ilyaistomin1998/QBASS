@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="play.png">play.png</file>
+        <file>pause.png</file>
+        <file>stop.png</file>
+        <file>prev.png</file>
+        <file>next.png</file>
+        <file>open.png</file>
+    </qresource>
+</RCC>

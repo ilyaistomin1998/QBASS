@@ -2,11 +2,14 @@
 #define AUDIOPLAYER_H
 
 #include <QMainWindow>
+#include "progress.h"
 #include <QFileDialog>
 #include <QTimer>
 #include <QTextCodec>
 #include <QMessageBox>
 #include <QTime>
+#include <QString>
+#include <QMouseEvent>
 #include "bass.h"
 
 namespace Ui {
@@ -30,7 +33,7 @@ private:
         stopped,
         waiting
     }state;
-    int i = 0;
+    int i;
     QStringList list;
     QTimer *timer;
     HSTREAM track;
@@ -45,6 +48,8 @@ private slots:
     void open_files();
     void changeTime();
     void playlist_doubleClicked(const QModelIndex&);
+    void create_playlist();
+    void delete_playlist();
 };
 
 #endif // AUDIOPLAYER_H

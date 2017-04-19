@@ -6,138 +6,243 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>386</width>
-    <height>411</height>
+    <width>673</width>
+    <height>447</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QBASS</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="position">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>51</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0:00:00</string>
-    </property>
-   </widget>
-   <widget class="QProgressBar" name="progress">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>23</y>
-      <width>231</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>24</number>
-    </property>
-    <property name="textVisible">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="length">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>20</y>
-      <width>51</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0:00:00</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_next">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>120</y>
-      <width>41</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>next</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_play_pause">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>120</y>
-      <width>51</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>pause</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_stop">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>120</y>
-      <width>41</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>stop</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_open">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>120</y>
-      <width>51</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>open</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_prev">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>120</y>
-      <width>41</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>prev</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="playlist">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>150</y>
-      <width>361</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QListWidget" name="alboms"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="createPlaylist">
+            <property name="text">
+             <string>create_playlist</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deletePlaylist">
+            <property name="text">
+             <string>delete_playlist</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="position">
+              <property name="text">
+               <string>0:00:00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="length">
+              <property name="text">
+               <string>0:00:00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="Progress" name="progress">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>12</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>12</height>
+               </size>
+              </property>
+              <property name="value">
+               <number>24</number>
+              </property>
+              <property name="textVisible">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QListWidget" name="playlist"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="3">
+           <widget class="QPushButton" name="btn_stop">
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>stop</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="btn_next">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>next</string>
+            </property>
+            <property name="shortcut">
+             <string>L, Ctrl+Right</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="btn_prev">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>prev</string>
+            </property>
+            <property name="shortcut">
+             <string>Л, Ctrl+Left</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btn_open">
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>open</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="btn_play_pause">
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>pause</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QSlider" name="sld_volume">
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="tracking">
+             <bool>true</bool>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>386</width>
+     <width>673</width>
      <height>25</height>
     </rect>
    </property>
@@ -153,6 +258,15 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>playlist</tabstop>
+  <tabstop>btn_open</tabstop>
+  <tabstop>btn_prev</tabstop>
+  <tabstop>btn_play_pause</tabstop>
+  <tabstop>btn_stop</tabstop>
+  <tabstop>btn_next</tabstop>
+  <tabstop>sld_volume</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
